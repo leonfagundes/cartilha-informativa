@@ -1,15 +1,15 @@
 "use client"
 
-import { useState } from "react"
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import { BackgroundCarousel } from "@/components/background-carousel"
 import { InfoCardsSection } from "@/components/info-cards-section"
 import { CartilhaButton } from "@/components/cartilha-button"
 import { useTranslations } from "@/hooks/use-translations"
+import { useLanguage } from "@/contexts/language-context"
 
 export default function Home() {
-  const [language, setLanguage] = useState("pt")
+  const { language, setLanguage } = useLanguage()
   const { translations, loading } = useTranslations(language)
 
   return (
@@ -49,7 +49,7 @@ export default function Home() {
         </div>
       </main>
       
-      <InfoCardsSection />
+      <InfoCardsSection language={language} />
       
       <Footer currentLanguage={language} />
     </div>

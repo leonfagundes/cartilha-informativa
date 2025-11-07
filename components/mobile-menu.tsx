@@ -29,8 +29,10 @@ export function MobileMenu({ currentLanguage, onLanguageChange }: MobileMenuProp
   const [open, setOpen] = useState(false)
   const { theme, setTheme } = useTheme()
 
-  const translations: Record<string, { about: string; theme: string; language: string; light: string; dark: string }> = {
+  const translations: Record<string, { home: string; importantInfo: string; about: string; theme: string; language: string; light: string; dark: string }> = {
     pt: {
+      home: "Início",
+      importantInfo: "Informações Importantes",
       about: "Sobre o projeto",
       theme: "Tema",
       language: "Idioma",
@@ -38,6 +40,8 @@ export function MobileMenu({ currentLanguage, onLanguageChange }: MobileMenuProp
       dark: "Escuro"
     },
     en: {
+      home: "Home",
+      importantInfo: "Important Information",
       about: "About the project",
       theme: "Theme",
       language: "Language",
@@ -45,6 +49,8 @@ export function MobileMenu({ currentLanguage, onLanguageChange }: MobileMenuProp
       dark: "Dark"
     },
     es: {
+      home: "Inicio",
+      importantInfo: "Información Importante",
       about: "Sobre el proyecto",
       theme: "Tema",
       language: "Idioma",
@@ -52,6 +58,8 @@ export function MobileMenu({ currentLanguage, onLanguageChange }: MobileMenuProp
       dark: "Oscuro"
     },
     fr: {
+      home: "Accueil",
+      importantInfo: "Informations Importantes",
       about: "À propos du projet",
       theme: "Thème",
       language: "Langue",
@@ -78,6 +86,28 @@ export function MobileMenu({ currentLanguage, onLanguageChange }: MobileMenuProp
         </SheetHeader>
         
         <div className="flex flex-col gap-6 mt-8">
+          {/* Home */}
+          <div className="space-y-2">
+            <Link 
+              href="/"
+              className="block w-full text-left px-4 py-3 rounded-lg hover:bg-accent transition-colors font-medium"
+              onClick={() => setOpen(false)}
+            >
+              {t.home}
+            </Link>
+          </div>
+
+          {/* Informações Importantes */}
+          <div className="space-y-2">
+            <a 
+              href="/#informacoes-importantes"
+              className="block w-full text-left px-4 py-3 rounded-lg hover:bg-accent transition-colors font-medium"
+              onClick={() => setOpen(false)}
+            >
+              {t.importantInfo}
+            </a>
+          </div>
+
           {/* Sobre o projeto */}
           <div className="space-y-2">
             <Link 

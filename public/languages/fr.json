@@ -5,7 +5,11 @@
   "description": "Ce projet naît de l'écoute, du respect et de l'empathie. Notre objectif est de comprendre les trajectoires de ceux qui ont quitté leur pays à la recherche de sécurité et d'un nouveau départ, en analysant leurs droits et défis au Brésil. Ici, nous cherchons à informer, sensibiliser et renforcer l'accueil humanitaire dans notre communauté.",
   "about": "À propos",
   "aboutProject": "À propos du projet",
+  "home": "Accueil",
+  "importantInfo": "Informations Importantes",
   "services": "Services",
   "contact": "Contact",
-  "footer": "Tous droits réservés"
+  "footer": "Tous droits réservés",
+  "logoTitle": "Livret d'Information",
+  "logoSubtitle": "Immigrants et Réfugiés"
 }

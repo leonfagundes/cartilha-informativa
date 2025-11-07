@@ -1,0 +1,50 @@
+{
+  "cards": [
+    {
+      "id": 1,
+      "title": "¿Qué es la Migración?",
+      "content": "La migración es el movimiento de personas de un país a otro por decisión propia. El inmigrante deja su país normalmente en busca de mejores condiciones de vida, trabajo, estudio u oportunidades personales. Este desplazamiento es planificado y no implica una amenaza directa a su vida.\n\nEn Brasil, la principal legislación que asegura derechos a los inmigrantes es la Ley de Migración (Ley Nº 13.445/2017), que reconoce al inmigrante como sujeto de derechos y promueve su integración en la sociedad.",
+      "lawLinkText": "Acceder a Legislación Completa"
+    },
+    {
+      "id": 2,
+      "title": "¿Quién es un Refugiado?",
+      "content": "Un refugiado es quien se ve forzado a dejar su país de origen debido a persecución por motivos como raza, religión, nacionalidad, grupo social u opinión política. En estas situaciones, regresar al país representa un riesgo para la vida, dignidad y libertad de la persona.\n\nLa base legal internacional está en la Convención sobre el Estatuto de los Refugiados (1951), complementada en Brasil por la Ley Nº 9.474/1997, que define y garantiza derechos a los refugiados.",
+      "lawLinkText": "Acceder a Legislación Completa"
+    },
+    {
+      "id": 3,
+      "title": "Legislación Brasileña",
+      "content": "Brasil posee una de las legislaciones más avanzadas en protección humanitaria:\n\n- Constitución Federal de 1988: establece la dignidad de la persona humana y la igualdad.\n- Ley Nº 9.474/97: regula la concesión del refugio.\n- Ley Nº 13.445/2017 (Ley de Migración): orienta políticas de acogida, regularización e integración del migrante.\n\nLa legislación garantiza el derecho a la salud, educación, acceso a la justicia y no discriminación.",
+      "lawLinkText": "Acceder a Legislación Completa"
+    },
+    {
+      "id": 4,
+      "title": "Legislación Internacional",
+      "content": "El Derecho Internacional establece bases para la protección humanitaria:\n\n- Declaración Universal de los Derechos Humanos (1948): reconoce derechos fundamentales de todas las personas.\n- Convención sobre el Estatuto de los Refugiados (1951): define quién es refugiado y garantiza protección.\n- Pacto Mundial para la Migración Segura, Ordenada y Regular (ONU): promueve cooperación internacional en la acogida de migrantes.",
+      "lawLinkText": "Acceder a Legislación Completa"
+    },
+    {
+      "id": 5,
+      "title": "Situación en el Municipio",
+      "content": "A nivel municipal, no existe legislación específica para la acogida de refugiados. Sin embargo, ya existen iniciativas y debates políticos en curso, como propuestas de ley orientadas a la acogida e integración social de inmigrantes y refugiados en la ciudad.\n\nEsto muestra la importancia de la sociedad civil y de las instituciones locales para llenar vacíos en la política pública."
+    },
+    {
+      "id": 6,
+      "title": "Instituto Kayton",
+      "content": "Organización que actúa en el apoyo directo a inmigrantes y refugiados, ofreciendo:\n\n- Cursos de portugués para facilitar la integración.\n- Orientación jurídica (documentos, solicitud de refugio, SISCONARE, Policía Federal).\n- Derivación a vacantes de empleo.\n\nEl Instituto Kayton actúa en la defensa de los derechos humanos y acogida, a pesar de las limitaciones financieras y ausencia de albergue propio.",
+      "websiteLinkText": "Visitar Sitio Web",
+      "galleryTitle": "Galería de Fotos"
+    },
+    {
+      "id": 7,
+      "title": "Desafíos Enfrentados",
+      "content": "Las principales dificultades relatadas incluyen:\n\n- Xenofobia y discriminación cultural.\n- Barreras lingüísticas que dificultan el trabajo y la convivencia.\n- Dificultades para encontrar vivienda y empleo.\n- Traumas psicológicos derivados de guerras y violencia.\n\nEstos desafíos refuerzan la importancia de la acogida social y políticas públicas inclusivas."
+    },
+    {
+      "id": 8,
+      "title": "Cómo Apoyar y Acoger",
+      "content": "Pequeñas actitudes transforman la integración:\n\n- Tratar a migrantes y refugiados con respeto y dignidad.\n- Incentivar el aprendizaje del portugués con diálogo simple.\n- Divulgar proyectos de apoyo y ONGs locales.\n- Combatir el prejuicio con información y empatía.\n\nLa humanidad acoge más que cualquier frontera."
+    }
+  ]
+}

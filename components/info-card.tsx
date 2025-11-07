@@ -16,26 +16,30 @@ type InfoCardProps = {
   icon: LucideIcon
   content: string
   lawLink?: string
+  lawLinkText?: string
   websiteLink?: string
+  websiteLinkText?: string
   images?: string[]
+  galleryTitle?: string
 }
 
 // Função para formatar o texto com referências de leis em negrito
 function formatContent(text: string) {
   // Regex para encontrar padrões como Lei Nº 13.445/2017, Lei Nº 9.474/97, etc.
   // Inclui números, pontos, barras e hífens
-  const lawPattern = /(Lei Nº [0-9./\-]+)/g
-  const parts = text.split(lawPattern)
+  // Também aplica negrito à palavra "Instituto", "Institute" ou "Institut" quando seguida de "Kayton"
+  const pattern = /(Lei Nº [0-9./\-]+|Instituto Kayton|Kayton Institute|Institut Kayton)/g
+  const parts = text.split(pattern)
   
   return parts.map((part, index) => {
-    if (lawPattern.test(part)) {
+    if (pattern.test(part)) {
       return <span key={index} className="font-bold">{part}</span>
     }
     return part
   })
 }
 
-export function InfoCard({ title, icon: Icon, content, lawLink, websiteLink, images }: InfoCardProps) {
+export function InfoCard({ title, icon: Icon, content, lawLink, lawLinkText, websiteLink, websiteLinkText, images, galleryTitle }: InfoCardProps) {
   return (
     <Dialog>
       <DialogTrigger asChild>
@@ -63,7 +67,7 @@ export function InfoCard({ title, icon: Icon, content, lawLink, websiteLink, ima
         
         {images && images.length > 0 && (
           <div className="mt-4 sm:mt-6 space-y-3 sm:space-y-4">
-            <h4 className="font-semibold text-foreground text-base sm:text-lg">Galeria de Fotos</h4>
+            <h4 className="font-semibold text-foreground text-base sm:text-lg">{galleryTitle || "Galeria de Fotos"}</h4>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {images.map((image, index) => (
                 <div key={index} className="relative aspect-video rounded-lg overflow-hidden border border-border">
@@ -91,7 +95,7 @@ export function InfoCard({ title, icon: Icon, content, lawLink, websiteLink, ima
                 <svg className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                 </svg>
-                <span className="truncate">Acessar Legislação Completa</span>
+                <span className="truncate">{lawLinkText || "Acessar Legislação Completa"}</span>
               </a>
             )}
             {websiteLink && (
@@ -104,7 +108,7 @@ export function InfoCard({ title, icon: Icon, content, lawLink, websiteLink, ima
                 <svg className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
                 </svg>
-                <span className="truncate">Visitar Site</span>
+                <span className="truncate">{websiteLinkText || "Visitar Site"}</span>
               </a>
             )}
           </div>

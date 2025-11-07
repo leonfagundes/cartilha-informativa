@@ -5,7 +5,11 @@
   "description": "This project is born from listening, respect and empathy. Our goal is to understand the trajectories of those who left their country in search of safety and a new beginning, analyzing their rights and challenges in Brazil. Here, we seek to inform, raise awareness and strengthen humanitarian reception in our community.",
   "about": "About",
   "aboutProject": "About the project",
+  "home": "Home",
+  "importantInfo": "Important Information",
   "services": "Services",
   "contact": "Contact",
-  "footer": "All rights reserved"
+  "footer": "All rights reserved",
+  "logoTitle": "Information Booklet",
+  "logoSubtitle": "Immigrants and Refugees"
 }

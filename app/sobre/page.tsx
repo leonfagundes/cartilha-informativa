@@ -1,28 +1,36 @@
 "use client"
 
-import { useState } from "react"
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
-import { Mail, Linkedin, ArrowLeft } from "lucide-react"
+import { Mail, Linkedin, Github, ArrowLeft } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
+import { useLanguage } from "@/contexts/language-context"
 
 const teamMembers = [
-  { name: "Gabriela Gonçalves", email: "", linkedin: "" },
-  { name: "Luana Karina", email: "", linkedin: "" },
-  { name: "Juliana Lima", email: "", linkedin: "" },
-  { name: "Maria Fernanda Rodrigues", email: "", linkedin: "" },
-  { name: "Lune Helena Gomides", email: "", linkedin: "" },
-  { name: "Helen Paes", email: "", linkedin: "" },
+  "Gabriela Gonçalves",
+  "Luana Karina",
+  "Juliana Lima",
+  "Maria Fernanda Rodrigues",
+  "Lune Helena Gomides",
+  "Helen Paes"
 ]
+
+const teamContact = {
+  email: "grupodepesquisa@gmail.com",
+  description: "Estudantes de direito da Universidade de Sorocaba (UNISO)",
+  image: "/grupo.jpeg"
+}
 
 const developer = {
   name: "Leon Fagundes",
-  email: "leon@example.com",
-  linkedin: "https://linkedin.com/in/leonfagundes"
+  email: "contato.leonfagundes@gmail.com",
+  linkedin: "https://linkedin.com/in/leonfagundes",
+  github: "https://github.com/leonfagundes"
 }
 
 export default function SobrePage() {
-  const [language, setLanguage] = useState("pt")
+  const { language, setLanguage } = useLanguage()
 
   const translations: Record<string, any> = {
     pt: {
@@ -185,42 +193,48 @@ Le projet cherche à allier théorie et pratique, en promouvant non seulement la
           <h2 className="text-2xl md:text-3xl font-display font-semibold mb-8">
             {t.team}
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {teamMembers.map((member, index) => (
-              <div 
-                key={index}
-                className="bg-card border border-border rounded-lg p-6 hover:shadow-lg transition-shadow"
-              >
-                <h3 className="font-display font-semibold text-lg mb-4">
-                  {member.name}
-                </h3>
+          <div className="bg-card border border-border rounded-lg p-6 hover:shadow-lg transition-shadow">
+            <div className="flex flex-col md:flex-row gap-6">
+              {/* Names and Info */}
+              <div className="flex-1">
+                <div className="mb-4">
+                  {teamMembers.map((name, index) => (
+                    <p key={index} className="font-display font-semibold text-base mb-1">
+                      {name}
+                    </p>
+                  ))}
+                </div>
+                {teamContact.description && (
+                  <p className="text-muted-foreground text-sm mb-4">
+                    {teamContact.description}
+                  </p>
+                )}
                 <div className="flex gap-3">
-                  {member.email && (
+                  {teamContact.email && (
                     <a
-                      href={`mailto:${member.email}`}
+                      href={`mailto:${teamContact.email}`}
                       className="p-2 rounded-lg bg-muted hover:bg-muted/80 transition-colors"
-                      aria-label={`Email ${member.name}`}
+                      aria-label="Email da equipe"
                     >
                       <Mail className="w-5 h-5" />
                     </a>
                   )}
-                  {member.linkedin && (
-                    <a
-                      href={member.linkedin}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="p-2 rounded-lg bg-muted hover:bg-muted/80 transition-colors"
-                      aria-label={`LinkedIn ${member.name}`}
-                    >
-                      <Linkedin className="w-5 h-5" />
-                    </a>
-                  )}
-                  {!member.email && !member.linkedin && (
-                    <p className="text-sm text-muted-foreground">{t.contact}: Em breve</p>
-                  )}
                 </div>
               </div>
-            ))}
+              
+              {/* Group Photo */}
+              {teamContact.image && (
+                <div className="relative w-full md:w-64 h-48 rounded-lg overflow-hidden flex-shrink-0">
+                  <Image
+                    src={teamContact.image}
+                    alt="Equipe do Projeto"
+                    fill
+                    className="object-cover"
+                    priority
+                  />
+                </div>
+              )}
+            </div>
           </div>
         </section>
 
@@ -252,6 +266,17 @@ Le projet cherche à allier théorie et pratique, en promouvant non seulement la
                   aria-label={`LinkedIn ${developer.name}`}
                 >
                   <Linkedin className="w-5 h-5" />
+                </a>
+              )}
+              {developer.github && (
+                <a
+                  href={developer.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-2 rounded-lg bg-muted hover:bg-muted/80 transition-colors"
+                  aria-label={`GitHub ${developer.name}`}
+                >
+                  <Github className="w-5 h-5" />
                 </a>
               )}
             </div>

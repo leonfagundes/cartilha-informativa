@@ -1,0 +1,50 @@
+{
+  "cards": [
+    {
+      "id": 1,
+      "title": "Qu'est-ce que la Migration?",
+      "content": "La migration est le mouvement de personnes d'un pays à un autre par leur propre décision. L'immigrant quitte son pays généralement à la recherche de meilleures conditions de vie, de travail, d'études ou d'opportunités personnelles. Ce déplacement est planifié et n'implique pas de menace directe pour sa vie.\n\nAu Brésil, la principale législation qui garantit les droits des immigrants est la Loi sur la Migration (Loi nº 13.445/2017), qui reconnaît l'immigrant comme sujet de droits et favorise son intégration dans la société.",
+      "lawLinkText": "Accéder à la Législation Complète"
+    },
+    {
+      "id": 2,
+      "title": "Qui est un Réfugié?",
+      "content": "Un réfugié est quelqu'un qui est forcé de quitter son pays d'origine en raison de persécutions fondées sur la race, la religion, la nationalité, le groupe social ou l'opinion politique. Dans ces situations, retourner au pays représente un risque pour la vie, la dignité et la liberté de la personne.\n\nLa base légale internationale se trouve dans la Convention relative au Statut des Réfugiés (1951), complétée au Brésil par la Loi nº 9.474/1997, qui définit et garantit les droits des réfugiés.",
+      "lawLinkText": "Accéder à la Législation Complète"
+    },
+    {
+      "id": 3,
+      "title": "Législation Brésilienne",
+      "content": "Le Brésil possède l'une des législations les plus avancées en matière de protection humanitaire:\n\n- Constitution Fédérale de 1988: établit la dignité de la personne humaine et l'égalité.\n- Loi nº 9.474/97: réglemente l'octroi du statut de réfugié.\n- Loi nº 13.445/2017 (Loi sur la Migration): oriente les politiques d'accueil, de régularisation et d'intégration des migrants.\n\nLa législation garantit le droit à la santé, à l'éducation, à l'accès à la justice et à la non-discrimination.",
+      "lawLinkText": "Accéder à la Législation Complète"
+    },
+    {
+      "id": 4,
+      "title": "Législation Internationale",
+      "content": "Le Droit International établit les bases de la protection humanitaire:\n\n- Déclaration Universelle des Droits de l'Homme (1948): reconnaît les droits fondamentaux de toutes les personnes.\n- Convention relative au Statut des Réfugiés (1951): définit qui est réfugié et garantit la protection.\n- Pacte Mondial pour des Migrations Sûres, Ordonnées et Régulières (ONU): favorise la coopération internationale dans l'accueil des migrants.",
+      "lawLinkText": "Accéder à la Législation Complète"
+    },
+    {
+      "id": 5,
+      "title": "Situation Municipale",
+      "content": "Au niveau municipal, il n'existe pas de législation spécifique pour l'accueil des réfugiés. Cependant, des initiatives et des débats politiques sont déjà en cours, tels que des propositions de loi visant à accueillir et intégrer socialement les immigrants et les réfugiés dans la ville.\n\nCela montre l'importance de la société civile et des institutions locales pour combler les lacunes de la politique publique."
+    },
+    {
+      "id": 6,
+      "title": "Institut Kayton",
+      "content": "Organisation qui fournit un soutien direct aux immigrants et aux réfugiés, offrant:\n\n- Cours de portugais pour faciliter l'intégration.\n- Orientation juridique (documents, demande de refuge, SISCONARE, Police Fédérale).\n- Orientation vers des offres d'emploi.\n\nL'Institut Kayton œuvre pour la défense des droits humains et l'accueil, malgré les limitations financières et l'absence de refuge propre.",
+      "websiteLinkText": "Visiter le Site Web",
+      "galleryTitle": "Galerie de Photos"
+    },
+    {
+      "id": 7,
+      "title": "Défis Rencontrés",
+      "content": "Les principales difficultés signalées incluent:\n\n- Xénophobie et discrimination culturelle.\n- Barrières linguistiques qui entravent le travail et la coexistence.\n- Difficultés à trouver un logement et un emploi.\n- Traumatismes psychologiques résultant de guerres et de violences.\n\nCes défis renforcent l'importance de l'accueil social et des politiques publiques inclusives."
+    },
+    {
+      "id": 8,
+      "title": "Comment Soutenir et Accueillir",
+      "content": "Les petites actions transforment l'intégration:\n\n- Traiter les migrants et les réfugiés avec respect et dignité.\n- Encourager l'apprentissage du portugais par un dialogue simple.\n- Promouvoir les projets de soutien et les ONG locales.\n- Combattre les préjugés par l'information et l'empathie.\n\nL'humanité accueille plus que n'importe quelle frontière."
+    }
+  ]
+}

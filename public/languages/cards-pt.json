@@ -1,0 +1,50 @@
+{
+  "cards": [
+    {
+      "id": 1,
+      "title": "O que é Migração?",
+      "content": "Migração é o movimento de pessoas de um país para outro por decisão própria. O imigrante deixa seu país normalmente em busca de melhores condições de vida, trabalho, estudo ou oportunidades pessoais. Esse deslocamento é planejado e não envolve ameaça direta à sua vida.\n\nNo Brasil, a principal legislação que assegura direitos aos imigrantes é a Lei de Migração (Lei Nº 13.445/2017), que reconhece o imigrante como sujeito de direitos e promove sua integração na sociedade.",
+      "lawLinkText": "Acessar Legislação Completa"
+    },
+    {
+      "id": 2,
+      "title": "Quem é Refugiado?",
+      "content": "Refugiado é quem é forçado a deixar seu país de origem devido a perseguição por motivos como raça, religião, nacionalidade, grupo social ou opinião política. Nessas situações, retornar ao país representa risco à vida, dignidade e liberdade da pessoa.\n\nA base legal internacional está na Convenção Relativa ao Estatuto dos Refugiados (1951), complementada no Brasil pela Lei Nº 9.474/1997, que define e garante direitos aos refugiados.",
+      "lawLinkText": "Acessar Legislação Completa"
+    },
+    {
+      "id": 3,
+      "title": "Legislação Brasileira",
+      "content": "O Brasil possui uma das legislações mais avançadas em proteção humanitária:\n\n- Constituição Federal de 1988: estabelece a dignidade da pessoa humana e a igualdade.\n- Lei Nº 9.474/97: regulamenta a concessão do refúgio.\n- Lei Nº 13.445/2017 (Lei de Migração): orienta políticas de acolhimento, regularização e integração do migrante.\n\nA legislação garante direito à saúde, educação, acesso à justiça e não discriminação.",
+      "lawLinkText": "Acessar Legislação Completa"
+    },
+    {
+      "id": 4,
+      "title": "Legislação Internacional",
+      "content": "O Direito Internacional estabelece bases para proteção humanitária:\n\n- Declaração Universal dos Direitos Humanos (1948): reconhece direitos fundamentais de todas as pessoas.\n- Convenção Relativa ao Estatuto dos Refugiados (1951): define quem é refugiado e garante proteção.\n- Pacto Global para a Migração Segura, Ordenada e Regular (ONU): promove cooperação internacional no acolhimento de migrantes.",
+      "lawLinkText": "Acessar Legislação Completa"
+    },
+    {
+      "id": 5,
+      "title": "Situação no Município",
+      "content": "No nível municipal, não há legislação específica para acolhimento de refugiados. Entretanto, já existem iniciativas e debates políticos em andamento, como propostas de lei orientadas ao acolhimento e integração social de imigrantes e refugiados na cidade.\n\nIsso mostra a importância da sociedade civil e de instituições locais para preencher lacunas na política pública."
+    },
+    {
+      "id": 6,
+      "title": "Instituto Kayton",
+      "content": "Organização que atua no apoio direto a imigrantes e refugiados, oferecendo:\n\n- Cursos de português para facilitar a integração.\n- Orientação jurídica (documentos, solicitação de refúgio, SISCONARE, Polícia Federal).\n- Encaminhamento para vagas de emprego.\n\nO Instituto atua na defesa dos direitos humanos e acolhimento, apesar de limitações financeiras e ausência de abrigo próprio.",
+      "websiteLinkText": "Visitar Site",
+      "galleryTitle": "Galeria de Fotos"
+    },
+    {
+      "id": 7,
+      "title": "Desafios Enfrentados",
+      "content": "As principais dificuldades relatadas incluem:\n\n- Xenofobia e discriminação cultural.\n- Barreiras linguísticas que dificultam trabalho e convivência.\n- Dificuldades para encontrar moradia e emprego.\n- Traumas psicológicos decorrentes de guerras e violência.\n\nEsses desafios reforçam a importância de acolhimento social e políticas públicas inclusivas."
+    },
+    {
+      "id": 8,
+      "title": "Como Apoiar e Acolher",
+      "content": "Pequenas atitudes transformam a integração:\n\n- Tratar migrantes e refugiados com respeito e dignidade.\n- Incentivar a aprendizagem do português com diálogo simples.\n- Divulgar projetos de apoio e ONGs locais.\n- Combater o preconceito com informação e empatia.\n\nA humanidade acolhe mais do que qualquer fronteira."
+    }
+  ]
+}

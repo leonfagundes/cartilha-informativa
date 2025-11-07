@@ -1,0 +1,50 @@
+{
+  "cards": [
+    {
+      "id": 1,
+      "title": "What is Migration?",
+      "content": "Migration is the movement of people from one country to another by their own decision. The immigrant leaves their country usually in search of better living conditions, work, study or personal opportunities. This displacement is planned and does not involve a direct threat to their life.\n\nIn Brazil, the main legislation that ensures rights to immigrants is the Migration Law (Law No. 13,445/2017), which recognizes the immigrant as a subject of rights and promotes their integration into society.",
+      "lawLinkText": "Access Full Legislation"
+    },
+    {
+      "id": 2,
+      "title": "Who is a Refugee?",
+      "content": "A refugee is someone who is forced to leave their country of origin due to persecution based on race, religion, nationality, social group or political opinion. In these situations, returning to the country represents a risk to the person's life, dignity and freedom.\n\nThe international legal basis is in the Convention Relating to the Status of Refugees (1951), complemented in Brazil by Law No. 9,474/1997, which defines and guarantees rights to refugees.",
+      "lawLinkText": "Access Full Legislation"
+    },
+    {
+      "id": 3,
+      "title": "Brazilian Legislation",
+      "content": "Brazil has one of the most advanced legislations in humanitarian protection:\n\n- Federal Constitution of 1988: establishes human dignity and equality.\n- Law No. 9,474/97: regulates the granting of refuge.\n- Law No. 13,445/2017 (Migration Law): guides policies for reception, regularization and integration of migrants.\n\nThe legislation guarantees the right to health, education, access to justice and non-discrimination.",
+      "lawLinkText": "Access Full Legislation"
+    },
+    {
+      "id": 4,
+      "title": "International Legislation",
+      "content": "International Law establishes bases for humanitarian protection:\n\n- Universal Declaration of Human Rights (1948): recognizes fundamental rights of all people.\n- Convention Relating to the Status of Refugees (1951): defines who is a refugee and guarantees protection.\n- Global Compact for Safe, Orderly and Regular Migration (UN): promotes international cooperation in welcoming migrants.",
+      "lawLinkText": "Access Full Legislation"
+    },
+    {
+      "id": 5,
+      "title": "Municipal Situation",
+      "content": "At the municipal level, there is no specific legislation for refugee reception. However, there are already initiatives and political debates underway, such as law proposals aimed at welcoming and socially integrating immigrants and refugees in the city.\n\nThis shows the importance of civil society and local institutions to fill gaps in public policy."
+    },
+    {
+      "id": 6,
+      "title": "Kayton Institute",
+      "content": "Organization that provides direct support to immigrants and refugees, offering:\n\n- Portuguese courses to facilitate integration.\n- Legal guidance (documents, refugee application, SISCONARE, Federal Police).\n- Referral to job vacancies.\n\nKayton Institute works in defense of human rights and reception, despite financial limitations and absence of its own shelter.",
+      "websiteLinkText": "Visit Website",
+      "galleryTitle": "Photo Gallery"
+    },
+    {
+      "id": 7,
+      "title": "Challenges Faced",
+      "content": "The main difficulties reported include:\n\n- Xenophobia and cultural discrimination.\n- Language barriers that hinder work and coexistence.\n- Difficulties in finding housing and employment.\n- Psychological trauma from wars and violence.\n\nThese challenges reinforce the importance of social reception and inclusive public policies."
+    },
+    {
+      "id": 8,
+      "title": "How to Support and Welcome",
+      "content": "Small actions transform integration:\n\n- Treat migrants and refugees with respect and dignity.\n- Encourage Portuguese learning through simple dialogue.\n- Promote local support projects and NGOs.\n- Combat prejudice with information and empathy.\n\nHumanity welcomes more than any border."
+    }
+  ]
+}

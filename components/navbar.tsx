@@ -3,6 +3,7 @@
 import { ThemeToggle } from "./theme-toggle"
 import { LanguageSwitcher } from "./language-switcher"
 import { MobileMenu } from "./mobile-menu"
+import { useTranslations } from "@/hooks/use-translations"
 import Image from "next/image"
 import Link from "next/link"
 
@@ -12,12 +13,7 @@ type NavbarProps = {
 }
 
 export function Navbar({ currentLanguage, onLanguageChange }: NavbarProps) {
-  const translations: Record<string, string> = {
-    pt: "Sobre o projeto",
-    en: "About the project",
-    es: "Sobre el proyecto",
-    fr: "À propos du projet"
-  }
+  const { translations } = useTranslations(currentLanguage)
 
   return (
     <nav className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 shadow-sm">
@@ -36,24 +32,38 @@ export function Navbar({ currentLanguage, onLanguageChange }: NavbarProps) {
           </div>
           <div className="flex flex-col min-w-0">
             <h1 className="text-base sm:text-lg md:text-xl lg:text-2xl font-display font-semibold tracking-tight leading-tight truncate">
-              Cartilha Informativa
+              {translations.logoTitle || "Cartilha Informativa"}
             </h1>
             <p className="text-[10px] sm:text-xs md:text-sm font-display font-medium text-muted-foreground tracking-wide truncate">
-              Imigrantes e Refugiados
+              {translations.logoSubtitle || "Imigrantes e Refugiados"}
             </p>
           </div>
         </div>
 
-        {/* Navigation and Controls Section */}
-        <div className="flex items-center gap-3 md:gap-6 flex-shrink-0">
-          {/* Desktop Navigation */}
+        {/* Center Navigation Links */}
+        <div className="hidden lg:flex items-center gap-6 flex-1 justify-center">
+          <Link 
+            href="/"
+            className="text-sm md:text-base font-display font-medium text-foreground hover:text-primary transition-colors"
+          >
+            {translations.home || "Início"}
+          </Link>
+          <a 
+            href="/#informacoes-importantes"
+            className="text-sm md:text-base font-display font-medium text-foreground hover:text-primary transition-colors"
+          >
+            {translations.importantInfo || "Informações Importantes"}
+          </a>
           <Link 
             href="/sobre"
-            className="hidden lg:block text-sm md:text-base font-display font-medium text-foreground hover:text-primary transition-colors"
+            className="text-sm md:text-base font-display font-medium text-foreground hover:text-primary transition-colors"
           >
-            {translations[currentLanguage] || translations.pt}
+            {translations.aboutProject || "Sobre o projeto"}
           </Link>
-          
+        </div>
+
+        {/* Right Controls Section */}
+        <div className="flex items-center gap-3 md:gap-6 flex-shrink-0">
           {/* Desktop Controls */}
           <div className="hidden lg:flex items-center gap-2 md:gap-3">
             <ThemeToggle />
