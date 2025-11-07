@@ -5,6 +5,7 @@ import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import { BackgroundCarousel } from "@/components/background-carousel"
 import { InfoCardsSection } from "@/components/info-cards-section"
+import { CartilhaButton } from "@/components/cartilha-button"
 import { useTranslations } from "@/hooks/use-translations"
 
 export default function Home() {
@@ -26,18 +27,22 @@ export default function Home() {
             </div>
           ) : (
             <>
-              <div className="space-y-4 backdrop-blur-sm bg-background/60 dark:bg-background/70 p-6 md:p-10 rounded-2xl shadow-2xl border border-border/50">
-                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-foreground drop-shadow-lg">
+              <div className="space-y-4 backdrop-blur-sm bg-background/60 dark:bg-background/70 p-6 md:p-10 rounded-2xl shadow-2xl border border-border/50 flex flex-col items-center">
+                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-foreground drop-shadow-lg text-center">
                   {translations.title}
                 </h1>
                 
-                <p className="text-lg md:text-xl font-medium text-foreground/90 max-w-2xl drop-shadow-md">
+                <p className="text-lg md:text-xl font-medium text-foreground/90 max-w-2xl drop-shadow-md text-center mx-auto">
                   {translations.welcome}
                 </p>
                 
-                <p className="text-sm md:text-base text-foreground/80 max-w-3xl drop-shadow">
+                <p className="text-sm md:text-base text-foreground/80 max-w-3xl drop-shadow text-center mx-auto">
                   {translations.description}
                 </p>
+
+                <div className="pt-4">
+                  <CartilhaButton language={language} />
+                </div>
               </div>
             </>
           )}

@@ -16,7 +16,7 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: "Cartilha Imigrantes e Refugiados",
-  description: "Guia completo multilíngue (Português, English, Español, Français) com informações essenciais sobre direitos de imigrantes e refugiados no Brasil. Conheça a legislação, organizações de apoio e recursos disponíveis para migração e refúgio.",
+  description: "Guia completo multilíngue com informações essenciais sobre direitos de imigrantes e refugiados no Brasil. Conheça a legislação, organizações de apoio e recursos disponíveis para migração e refúgio.",
   keywords: ["imigrantes", "refugiados", "direitos humanos", "migração", "refúgio", "Brasil", "legislação", "apoio humanitário"],
   authors: [{ name: "Cartilha Informativa" }],
   icons: {

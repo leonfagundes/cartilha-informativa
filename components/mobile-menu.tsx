@@ -3,6 +3,7 @@
 import { useState } from "react"
 import { Menu, X, Sun, Moon, Globe } from "lucide-react"
 import { useTheme } from "next-themes"
+import Link from "next/link"
 import {
   Sheet,
   SheetContent,
@@ -79,12 +80,13 @@ export function MobileMenu({ currentLanguage, onLanguageChange }: MobileMenuProp
         <div className="flex flex-col gap-6 mt-8">
           {/* Sobre o projeto */}
           <div className="space-y-2">
-            <button 
-              className="w-full text-left px-4 py-3 rounded-lg hover:bg-accent transition-colors font-medium"
+            <Link 
+              href="/sobre"
+              className="block w-full text-left px-4 py-3 rounded-lg hover:bg-accent transition-colors font-medium"
               onClick={() => setOpen(false)}
             >
               {t.about}
-            </button>
+            </Link>
           </div>
 
           {/* Tema */}

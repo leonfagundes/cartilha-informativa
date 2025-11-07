@@ -20,16 +20,31 @@ type InfoCardProps = {
   images?: string[]
 }
 
+// Função para formatar o texto com referências de leis em negrito
+function formatContent(text: string) {
+  // Regex para encontrar padrões como Lei Nº 13.445/2017, Lei Nº 9.474/97, etc.
+  // Inclui números, pontos, barras e hífens
+  const lawPattern = /(Lei Nº [0-9./\-]+)/g
+  const parts = text.split(lawPattern)
+  
+  return parts.map((part, index) => {
+    if (lawPattern.test(part)) {
+      return <span key={index} className="font-bold">{part}</span>
+    }
+    return part
+  })
+}
+
 export function InfoCard({ title, icon: Icon, content, lawLink, websiteLink, images }: InfoCardProps) {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <button className="group relative overflow-hidden rounded-xl bg-blue-50 dark:bg-blue-950/30 border border-blue-200 dark:border-blue-800 hover:border-blue-400 dark:hover:border-blue-600 p-6 transition-all duration-300 hover:shadow-xl hover:scale-105 text-left w-full">
+        <button className="group relative overflow-hidden rounded-xl bg-transparent backdrop-blur-sm border-2 border-gray-700 dark:border-gray-300 hover:border-gray-600 dark:hover:border-gray-200 hover:bg-gray-700/5 dark:hover:bg-gray-300/5 p-6 transition-all duration-300 hover:shadow-xl hover:scale-105 text-left w-full">
           <div className="flex flex-col items-center gap-4 text-center">
-            <div className="rounded-full bg-blue-100 dark:bg-blue-900/50 p-4 group-hover:bg-blue-200 dark:group-hover:bg-blue-800 transition-colors">
-              <Icon className="w-8 h-8 text-blue-600 dark:text-blue-400" />
+            <div className="rounded-full bg-gray-700/10 dark:bg-gray-300/10 border border-gray-700/60 dark:border-gray-300/60 p-4 group-hover:bg-gray-700/20 dark:group-hover:bg-gray-300/20 transition-colors">
+              <Icon className="w-8 h-8 text-gray-700 dark:text-gray-300" />
             </div>
-            <h3 className="font-display font-semibold text-lg text-foreground group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+            <h3 className="font-display font-semibold text-lg text-gray-700 dark:text-gray-300 group-hover:text-gray-600 dark:group-hover:text-gray-200 transition-colors">
               {title}
             </h3>
           </div>
@@ -43,7 +58,7 @@ export function InfoCard({ title, icon: Icon, content, lawLink, websiteLink, ima
           </DialogTitle>
         </DialogHeader>
         <DialogDescription className="text-sm sm:text-base text-foreground/80 whitespace-pre-line leading-relaxed pt-3 sm:pt-4">
-          {content}
+          {formatContent(content)}
         </DialogDescription>
         
         {images && images.length > 0 && (
@@ -71,7 +86,7 @@ export function InfoCard({ title, icon: Icon, content, lawLink, websiteLink, ima
                 href={lawLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-4 sm:px-6 py-2.5 sm:py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors text-sm sm:text-base"
+                className="inline-flex items-center justify-center gap-2 px-4 sm:px-6 py-2.5 sm:py-3 bg-blue-800 dark:bg-white hover:bg-blue-900 dark:hover:bg-gray-100 text-white dark:text-gray-900 rounded-lg font-medium transition-colors text-sm sm:text-base"
               >
                 <svg className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
@@ -84,7 +99,7 @@ export function InfoCard({ title, icon: Icon, content, lawLink, websiteLink, ima
                 href={websiteLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-4 sm:px-6 py-2.5 sm:py-3 bg-green-600 hover:bg-green-700 text-white rounded-lg font-medium transition-colors text-sm sm:text-base"
+                className="inline-flex items-center justify-center gap-2 px-4 sm:px-6 py-2.5 sm:py-3 bg-blue-800 dark:bg-white hover:bg-blue-900 dark:hover:bg-gray-100 text-white dark:text-gray-900 rounded-lg font-medium transition-colors text-sm sm:text-base"
               >
                 <svg className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />

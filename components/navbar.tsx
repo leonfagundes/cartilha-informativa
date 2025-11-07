@@ -4,6 +4,7 @@ import { ThemeToggle } from "./theme-toggle"
 import { LanguageSwitcher } from "./language-switcher"
 import { MobileMenu } from "./mobile-menu"
 import Image from "next/image"
+import Link from "next/link"
 
 type NavbarProps = {
   currentLanguage: string
@@ -24,20 +25,12 @@ export function Navbar({ currentLanguage, onLanguageChange }: NavbarProps) {
         {/* Logo Section */}
         <div className="flex items-center gap-3 min-w-0">
           <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 relative">
-            {/* Ícone para modo claro (preto) */}
-            <Image
-              src="/logo-icon/icone-preto.png"
-              alt="Logo"
-              fill
-              className="object-contain dark:hidden"
-              priority
-            />
-            {/* Ícone para modo escuro (colorido) */}
+            {/* Ícone colorido para ambos os modos */}
             <Image
               src="/logo-icon/icone-colorido.png"
               alt="Logo"
               fill
-              className="object-contain hidden dark:block"
+              className="object-contain"
               priority
             />
           </div>
@@ -54,9 +47,12 @@ export function Navbar({ currentLanguage, onLanguageChange }: NavbarProps) {
         {/* Navigation and Controls Section */}
         <div className="flex items-center gap-3 md:gap-6 flex-shrink-0">
           {/* Desktop Navigation */}
-          <button className="hidden lg:block text-sm md:text-base font-display font-medium text-foreground hover:text-primary transition-colors">
+          <Link 
+            href="/sobre"
+            className="hidden lg:block text-sm md:text-base font-display font-medium text-foreground hover:text-primary transition-colors"
+          >
             {translations[currentLanguage] || translations.pt}
-          </button>
+          </Link>
           
           {/* Desktop Controls */}
           <div className="hidden lg:flex items-center gap-2 md:gap-3">

@@ -61,7 +61,7 @@ export function BackgroundCarousel() {
 
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % validImagesList.length)
-    }, 3000) // Troca a cada 3 segundos
+    }, 5000) // Troca a cada 5 segundos
 
     return () => clearInterval(interval)
   }, [validImagesList.length])
@@ -94,9 +94,9 @@ export function BackgroundCarousel() {
             />
           </div>
           {/* Overlay para reduzir opacidade e melhorar legibilidade */}
-          {/* Modo claro: 60% de opacidade (40% da imagem visível) */}
+          {/* Modo claro: sem overlay (imagens aparecem 100%) */}
           {/* Modo escuro: 80% de opacidade (20% da imagem visível) */}
-          <div className="absolute inset-0 bg-background/60 dark:bg-background/80" />
+          <div className="absolute inset-0 dark:bg-background/80" />
         </div>
       ))}
     </div>
