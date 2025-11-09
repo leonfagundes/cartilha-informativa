@@ -43,20 +43,20 @@ export function InfoCard({ title, icon: Icon, content, lawLink, lawLinkText, web
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <button className="group relative overflow-hidden rounded-xl bg-transparent backdrop-blur-sm border-2 border-gray-700 dark:border-gray-300 hover:border-gray-600 dark:hover:border-gray-200 hover:bg-gray-700/5 dark:hover:bg-gray-300/5 p-6 transition-all duration-300 hover:shadow-xl hover:scale-105 text-left w-full">
-          <div className="flex flex-col items-center gap-4 text-center">
-            <div className="rounded-full bg-gray-700/10 dark:bg-gray-300/10 border border-gray-700/60 dark:border-gray-300/60 p-4 group-hover:bg-gray-700/20 dark:group-hover:bg-gray-300/20 transition-colors">
-              <Icon className="w-8 h-8 text-gray-700 dark:text-gray-300" />
+        <button className="group relative overflow-hidden rounded-xl bg-transparent backdrop-blur-sm border-2 border-gray-700 dark:border-gray-300 hover:border-gray-600 dark:hover:border-gray-200 hover:bg-gray-700/5 dark:hover:bg-gray-300/5 p-4 sm:p-6 transition-all duration-300 hover:shadow-xl hover:scale-105 text-left w-full">
+          <div className="flex flex-col items-center gap-3 sm:gap-4 text-center">
+            <div className="rounded-full bg-gray-700/10 dark:bg-gray-300/10 border border-gray-700/60 dark:border-gray-300/60 p-3 sm:p-4 group-hover:bg-gray-700/20 dark:group-hover:bg-gray-300/20 transition-colors">
+              <Icon className="w-6 h-6 sm:w-8 sm:h-8 text-gray-700 dark:text-gray-300" />
             </div>
-            <h3 className="font-display font-semibold text-lg text-gray-700 dark:text-gray-300 group-hover:text-gray-600 dark:group-hover:text-gray-200 transition-colors">
+            <h3 className="font-display font-semibold text-sm sm:text-base md:text-lg text-gray-700 dark:text-gray-300 group-hover:text-gray-600 dark:group-hover:text-gray-200 transition-colors line-clamp-2">
               {title}
             </h3>
           </div>
         </button>
       </DialogTrigger>
-      <DialogContent className="w-[calc(100vw-4rem)] sm:w-[calc(100vw-6rem)] md:w-[calc(100vw-8rem)] lg:max-w-2xl max-h-[85vh] sm:max-h-[90vh] overflow-y-auto p-4 sm:p-6">
+      <DialogContent className="w-[calc(100vw-2rem)] sm:w-[calc(100vw-4rem)] md:w-[calc(100vw-6rem)] lg:max-w-2xl max-h-[85vh] sm:max-h-[90vh] overflow-y-auto p-4 sm:p-6">
         <DialogHeader>
-          <DialogTitle className="flex items-center gap-2 sm:gap-3 text-lg sm:text-xl md:text-2xl pr-8">
+          <DialogTitle className="flex items-center gap-2 sm:gap-3 text-base sm:text-lg md:text-xl lg:text-2xl pr-8">
             <Icon className="w-5 h-5 sm:w-6 sm:h-6 text-blue-600 dark:text-blue-400 flex-shrink-0" />
             <span className="line-clamp-2">{title}</span>
           </DialogTitle>

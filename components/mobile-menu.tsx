@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { Menu, X, Sun, Moon, Globe } from "lucide-react"
+import { Menu, Home, FileText, Info, Sun, Moon, Globe } from "lucide-react"
 import { useTheme } from "next-themes"
 import Link from "next/link"
 import {
@@ -81,46 +81,44 @@ export function MobileMenu({ currentLanguage, onLanguageChange }: MobileMenuProp
         </button>
       </SheetTrigger>
       <SheetContent side="right" className="w-[300px] sm:w-[350px]">
-        <SheetHeader>
-          <SheetTitle className="text-left">Menu</SheetTitle>
-        </SheetHeader>
+        {/* Custom header aligned with X button - X is at top-4 with p-3, so total 28px (1rem + 0.75rem) from top */}
+        <div className="pt-[1.75rem] pb-4 px-6 border-b">
+          <h2 className="text-lg font-semibold leading-6">Menu</h2>
+        </div>
         
-        <div className="flex flex-col gap-6 mt-8">
+        <div className="flex flex-col gap-2">
           {/* Home */}
-          <div className="space-y-2">
-            <Link 
-              href="/"
-              className="block w-full text-left px-4 py-3 rounded-lg hover:bg-accent transition-colors font-medium"
-              onClick={() => setOpen(false)}
-            >
-              {t.home}
-            </Link>
-          </div>
+          <Link 
+            href="/"
+            className="flex items-center gap-3 w-full text-left px-4 py-3 rounded-lg hover:bg-accent transition-colors font-medium"
+            onClick={() => setOpen(false)}
+          >
+            <Home className="w-5 h-5" />
+            {t.home}
+          </Link>
 
           {/* Informações Importantes */}
-          <div className="space-y-2">
-            <a 
-              href="/#informacoes-importantes"
-              className="block w-full text-left px-4 py-3 rounded-lg hover:bg-accent transition-colors font-medium"
-              onClick={() => setOpen(false)}
-            >
-              {t.importantInfo}
-            </a>
-          </div>
+          <a 
+            href="/#informacoes-importantes"
+            className="flex items-center gap-3 w-full text-left px-4 py-3 rounded-lg hover:bg-accent transition-colors font-medium"
+            onClick={() => setOpen(false)}
+          >
+            <FileText className="w-5 h-5" />
+            {t.importantInfo}
+          </a>
 
           {/* Sobre o projeto */}
-          <div className="space-y-2">
-            <Link 
-              href="/sobre"
-              className="block w-full text-left px-4 py-3 rounded-lg hover:bg-accent transition-colors font-medium"
-              onClick={() => setOpen(false)}
-            >
-              {t.about}
-            </Link>
-          </div>
+          <Link 
+            href="/sobre"
+            className="flex items-center gap-3 w-full text-left px-4 py-3 rounded-lg hover:bg-accent transition-colors font-medium"
+            onClick={() => setOpen(false)}
+          >
+            <Info className="w-5 h-5" />
+            {t.about}
+          </Link>
 
           {/* Tema */}
-          <div className="space-y-3">
+          <div className="space-y-2 mt-4">
             <h3 className="text-sm font-semibold text-muted-foreground px-4 flex items-center gap-2">
               {theme === "dark" ? <Moon className="w-4 h-4" /> : <Sun className="w-4 h-4" />}
               {t.theme}
@@ -152,7 +150,7 @@ export function MobileMenu({ currentLanguage, onLanguageChange }: MobileMenuProp
           </div>
 
           {/* Idioma */}
-          <div className="space-y-3">
+          <div className="space-y-2 mt-2">
             <h3 className="text-sm font-semibold text-muted-foreground px-4 flex items-center gap-2">
               <Globe className="w-4 h-4" />
               {t.language}

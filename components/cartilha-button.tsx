@@ -43,19 +43,23 @@ export function CartilhaButton({ language }: CartilhaButtonProps) {
 
   const t = translations[language] || translations.pt
 
+  const pdfPath = "/Entre Fronteiras e Direitos.pdf"
+
   const handleViewPdf = () => {
-    // Aqui você pode adicionar a lógica para abrir o PDF em uma nova aba
-    console.log("Ver PDF")
+    window.open(pdfPath, '_blank')
   }
 
   const handleViewAndDownload = () => {
-    // Aqui você pode adicionar a lógica para ver e baixar
-    console.log("Ver e baixar")
+    window.open(pdfPath, '_blank')
   }
 
   const handleDownloadPdf = () => {
-    // Aqui você pode adicionar a lógica para baixar o PDF
-    console.log("Baixar PDF")
+    const link = document.createElement('a')
+    link.href = pdfPath
+    link.download = 'Entre Fronteiras e Direitos.pdf'
+    document.body.appendChild(link)
+    link.click()
+    document.body.removeChild(link)
   }
 
   return (

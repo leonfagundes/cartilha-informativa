@@ -64,9 +64,9 @@ export function InfoCardsSection({ language }: InfoCardsSectionProps) {
 
   if (loading) {
     return (
-      <section className="w-full bg-background py-16 md:py-24">
-        <div className="w-full max-w-7xl mx-auto px-8 md:px-10 lg:px-4">
-          <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6">
+      <section className="w-full max-w-[100vw] overflow-x-hidden bg-background py-12 sm:py-16 md:py-24">
+        <div className="w-full max-w-7xl mx-auto px-3 sm:px-6 md:px-8 lg:px-4">
+          <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
             {[...Array(8)].map((_, i) => (
               <div key={i} className="animate-pulse">
                 <div className="h-32 bg-muted rounded-lg"></div>
@@ -79,18 +79,18 @@ export function InfoCardsSection({ language }: InfoCardsSectionProps) {
   }
 
   return (
-    <section id="informacoes-importantes" className="w-full bg-background py-16 md:py-24">
-      <div className="w-full max-w-7xl mx-auto px-8 md:px-10 lg:px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
+    <section id="informacoes-importantes" className="w-full max-w-[100vw] overflow-x-hidden bg-background py-12 sm:py-16 md:py-24">
+      <div className="w-full max-w-7xl mx-auto px-3 sm:px-6 md:px-8 lg:px-4">
+        <div className="text-center mb-8 sm:mb-12">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-display font-bold text-foreground mb-3 sm:mb-4 break-words px-2">
             Informações Importantes
           </h2>
-          <p className="text-muted-foreground text-base md:text-lg max-w-2xl mx-auto">
+          <p className="text-muted-foreground text-sm sm:text-base md:text-lg max-w-2xl mx-auto px-4 break-words">
             Clique em cada card para saber mais sobre migração, refúgio e direitos humanos
           </p>
         </div>
 
-        <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6">
+        <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
           {cards.map((card) => {
             const staticData = staticCardData[card.id] || { lawLink: undefined, websiteLink: undefined, images: undefined }
             return (

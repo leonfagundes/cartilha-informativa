@@ -146,77 +146,77 @@ Le projet cherche à allier théorie et pratique, en promouvant non seulement la
   const t = translations[language] || translations.pt
 
   return (
-    <div className="min-h-screen w-full bg-background text-foreground flex flex-col">
+    <div className="min-h-screen w-full max-w-[100vw] overflow-x-hidden bg-background text-foreground flex flex-col">
       <Navbar currentLanguage={language} onLanguageChange={setLanguage} />
       
-      <main className="flex-1 w-full max-w-7xl mx-auto px-8 md:px-10 lg:px-6 py-12 md:py-20">
+      <main className="flex-1 w-full max-w-7xl mx-auto px-3 sm:px-6 md:px-8 lg:px-6 py-8 sm:py-12 md:py-20">
         {/* Back Button */}
         <Link 
           href="/"
-          className="inline-flex items-center gap-2 text-foreground/70 hover:text-foreground transition-colors mb-8"
+          className="inline-flex items-center gap-2 text-foreground/70 hover:text-foreground transition-colors mb-6 sm:mb-8 text-sm sm:text-base"
         >
-          <ArrowLeft className="w-5 h-5" />
+          <ArrowLeft className="w-4 h-4 sm:w-5 sm:h-5" />
           {t.backButton}
         </Link>
 
         {/* Title */}
-        <h1 className="text-4xl md:text-5xl font-display font-bold mb-8">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-6 sm:mb-8 break-words">
           {t.title}
         </h1>
 
         {/* Objective Section */}
-        <section className="mb-16">
-          <h2 className="text-2xl md:text-3xl font-display font-semibold mb-6">
+        <section className="mb-10 sm:mb-12 md:mb-16">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-display font-semibold mb-4 sm:mb-6 break-words">
             {t.objective}
           </h2>
-          <div className="prose prose-lg dark:prose-invert max-w-none">
-            <p className="text-foreground/80 whitespace-pre-line leading-relaxed">
+          <div className="prose prose-sm sm:prose-base md:prose-lg dark:prose-invert max-w-none">
+            <p className="text-foreground/80 whitespace-pre-line leading-relaxed text-sm sm:text-base">
               {t.objectiveText}
             </p>
           </div>
         </section>
 
         {/* Methodology Section */}
-        <section className="mb-16">
-          <h2 className="text-2xl md:text-3xl font-display font-semibold mb-6">
+        <section className="mb-10 sm:mb-12 md:mb-16">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-display font-semibold mb-4 sm:mb-6 break-words">
             {t.methodology}
           </h2>
-          <div className="prose prose-lg dark:prose-invert max-w-none">
-            <p className="text-foreground/80 whitespace-pre-line leading-relaxed">
+          <div className="prose prose-sm sm:prose-base md:prose-lg dark:prose-invert max-w-none">
+            <p className="text-foreground/80 whitespace-pre-line leading-relaxed text-sm sm:text-base break-words">
               {t.methodologyText}
             </p>
           </div>
         </section>
 
         {/* Team Section */}
-        <section className="mb-16">
-          <h2 className="text-2xl md:text-3xl font-display font-semibold mb-8">
+        <section className="mb-10 sm:mb-12 md:mb-16">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-display font-semibold mb-6 sm:mb-8">
             {t.team}
           </h2>
-          <div className="bg-card border border-border rounded-lg p-6 hover:shadow-lg transition-shadow">
-            <div className="flex flex-col md:flex-row gap-6">
+          <div className="bg-card border border-border rounded-lg p-4 sm:p-6 hover:shadow-lg transition-shadow">
+            <div className="flex flex-col md:flex-row gap-4 sm:gap-6">
               {/* Names and Info */}
               <div className="flex-1">
-                <div className="mb-4">
+                <div className="mb-3 sm:mb-4">
                   {teamMembers.map((name, index) => (
-                    <p key={index} className="font-display font-semibold text-base mb-1">
+                    <p key={index} className="font-display font-semibold text-sm sm:text-base mb-1">
                       {name}
                     </p>
                   ))}
                 </div>
                 {teamContact.description && (
-                  <p className="text-muted-foreground text-sm mb-4">
+                  <p className="text-muted-foreground text-xs sm:text-sm mb-3 sm:mb-4">
                     {teamContact.description}
                   </p>
                 )}
-                <div className="flex gap-3">
+                <div className="flex gap-2 sm:gap-3">
                   {teamContact.email && (
                     <a
                       href={`mailto:${teamContact.email}`}
                       className="p-2 rounded-lg bg-muted hover:bg-muted/80 transition-colors"
                       aria-label="Email da equipe"
                     >
-                      <Mail className="w-5 h-5" />
+                      <Mail className="w-4 h-4 sm:w-5 sm:h-5" />
                     </a>
                   )}
                 </div>
@@ -224,7 +224,7 @@ Le projet cherche à allier théorie et pratique, en promouvant non seulement la
               
               {/* Group Photo */}
               {teamContact.image && (
-                <div className="relative w-full md:w-64 h-48 rounded-lg overflow-hidden flex-shrink-0">
+                <div className="relative w-full md:w-64 h-40 sm:h-48 rounded-lg overflow-hidden flex-shrink-0">
                   <Image
                     src={teamContact.image}
                     alt="Equipe do Projeto"
@@ -240,21 +240,21 @@ Le projet cherche à allier théorie et pratique, en promouvant non seulement la
 
         {/* Developer Section */}
         <section>
-          <h2 className="text-2xl md:text-3xl font-display font-semibold mb-8">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-display font-semibold mb-6 sm:mb-8">
             {t.developer}
           </h2>
-          <div className="bg-card border border-border rounded-lg p-6 max-w-md hover:shadow-lg transition-shadow">
-            <h3 className="font-display font-semibold text-lg mb-4">
+          <div className="bg-card border border-border rounded-lg p-4 sm:p-6 max-w-md hover:shadow-lg transition-shadow">
+            <h3 className="font-display font-semibold text-base sm:text-lg mb-3 sm:mb-4">
               {developer.name}
             </h3>
-            <div className="flex gap-3">
+            <div className="flex gap-2 sm:gap-3">
               {developer.email && (
                 <a
                   href={`mailto:${developer.email}`}
                   className="p-2 rounded-lg bg-muted hover:bg-muted/80 transition-colors"
                   aria-label={`Email ${developer.name}`}
                 >
-                  <Mail className="w-5 h-5" />
+                  <Mail className="w-4 h-4 sm:w-5 sm:h-5" />
                 </a>
               )}
               {developer.linkedin && (
@@ -265,7 +265,7 @@ Le projet cherche à allier théorie et pratique, en promouvant non seulement la
                   className="p-2 rounded-lg bg-muted hover:bg-muted/80 transition-colors"
                   aria-label={`LinkedIn ${developer.name}`}
                 >
-                  <Linkedin className="w-5 h-5" />
+                  <Linkedin className="w-4 h-4 sm:w-5 sm:h-5" />
                 </a>
               )}
               {developer.github && (
@@ -276,7 +276,7 @@ Le projet cherche à allier théorie et pratique, en promouvant non seulement la
                   className="p-2 rounded-lg bg-muted hover:bg-muted/80 transition-colors"
                   aria-label={`GitHub ${developer.name}`}
                 >
-                  <Github className="w-5 h-5" />
+                  <Github className="w-4 h-4 sm:w-5 sm:h-5" />
                 </a>
               )}
             </div>

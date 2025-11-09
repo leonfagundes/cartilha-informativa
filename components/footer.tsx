@@ -15,13 +15,13 @@ export function Footer({ currentLanguage }: FooterProps) {
   }
 
   return (
-    <footer className="w-full border-t bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 mt-auto">
-      <div className="w-full max-w-7xl mx-auto px-8 md:px-10 lg:px-6 py-6 md:py-8">
-        <div className="flex flex-col items-center justify-center gap-2 text-center">
-          <p className="text-sm md:text-base text-muted-foreground font-display font-medium">
+    <footer className="w-full max-w-[100vw] overflow-x-hidden border-t bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 mt-auto">
+      <div className="w-full max-w-7xl mx-auto px-3 sm:px-6 md:px-8 lg:px-6 py-4 sm:py-6 md:py-8">
+        <div className="flex flex-col items-center justify-center gap-1 sm:gap-2 text-center">
+          <p className="text-xs sm:text-sm md:text-base text-muted-foreground font-display font-medium break-words px-2">
             © {currentYear} Cartilha Informativa - Imigrantes e Refugiados
           </p>
-          <p className="text-xs md:text-sm text-muted-foreground">
+          <p className="text-xs sm:text-sm text-muted-foreground break-words">
             {translations[currentLanguage] || translations.pt}
           </p>
         </div>
