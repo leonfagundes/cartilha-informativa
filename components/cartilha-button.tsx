@@ -1,6 +1,5 @@
 "use client"
 
-import { useState } from "react"
 import { ChevronDown, FileText, Download, Eye } from "lucide-react"
 import {
   DropdownMenu,
@@ -14,49 +13,50 @@ type CartilhaButtonProps = {
 }
 
 export function CartilhaButton({ language }: CartilhaButtonProps) {
-  const translations: Record<string, { button: string; viewPdf: string; viewDownload: string; downloadPdf: string }> = {
+  const translations: Record<string, { button: string; viewPdf: string; downloadPdf: string }> = {
     pt: {
       button: "Ver Cartilha",
-      viewPdf: "Ver cartilha em PDF",
-      viewDownload: "Ver e baixar cartilha",
-      downloadPdf: "Baixar PDF da cartilha"
+      viewPdf: "Visualizar PDF",
+      downloadPdf: "Baixar PDF"
     },
     en: {
       button: "View Guide",
-      viewPdf: "View guide as PDF",
-      viewDownload: "View and download guide",
-      downloadPdf: "Download PDF guide"
+      viewPdf: "View PDF",
+      downloadPdf: "Download PDF"
     },
     es: {
       button: "Ver Guía",
-      viewPdf: "Ver guía en PDF",
-      viewDownload: "Ver y descargar guía",
-      downloadPdf: "Descargar PDF de la guía"
+      viewPdf: "Visualizar PDF",
+      downloadPdf: "Descargar PDF"
     },
     fr: {
       button: "Voir le Guide",
-      viewPdf: "Voir le guide en PDF",
-      viewDownload: "Voir et télécharger le guide",
-      downloadPdf: "Télécharger le PDF du guide"
+      viewPdf: "Visualiser PDF",
+      downloadPdf: "Télécharger PDF"
     }
   }
 
   const t = translations[language] || translations.pt
 
-  const pdfPath = "/Entre Fronteiras e Direitos.pdf"
-
-  const handleViewPdf = () => {
-    window.open(pdfPath, '_blank')
+  // Map language codes to PDF filenames
+  const pdfMap: Record<string, string> = {
+    pt: "/pdfs/pt-br.pdf",
+    en: "/pdfs/en.pdf",
+    es: "/pdfs/es.pdf",
+    fr: "/pdfs/en.pdf" // Use English PDF for French if no French PDF exists
   }
 
-  const handleViewAndDownload = () => {
+  const pdfPath = pdfMap[language] || pdfMap.pt
+
+  const handleViewPdf = () => {
     window.open(pdfPath, '_blank')
   }
 
   const handleDownloadPdf = () => {
     const link = document.createElement('a')
     link.href = pdfPath
-    link.download = 'Entre Fronteiras e Direitos.pdf'
+    const fileName = `cartilha-${language}.pdf`
+    link.download = fileName
     document.body.appendChild(link)
     link.click()
     document.body.removeChild(link)
@@ -75,10 +75,6 @@ export function CartilhaButton({ language }: CartilhaButtonProps) {
         <DropdownMenuItem onClick={handleViewPdf} className="cursor-pointer">
           <Eye className="w-4 h-4 mr-2" />
           {t.viewPdf}
-        </DropdownMenuItem>
-        <DropdownMenuItem onClick={handleViewAndDownload} className="cursor-pointer">
-          <FileText className="w-4 h-4 mr-2" />
-          {t.viewDownload}
         </DropdownMenuItem>
         <DropdownMenuItem onClick={handleDownloadPdf} className="cursor-pointer">
           <Download className="w-4 h-4 mr-2" />

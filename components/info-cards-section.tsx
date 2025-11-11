@@ -12,6 +12,7 @@ import {
   Heart 
 } from "lucide-react"
 import { useCardTranslations } from "@/hooks/use-card-translations"
+import { useTranslations } from "@/hooks/use-translations"
 
 interface InfoCardsSectionProps {
   language: string
@@ -61,6 +62,7 @@ const staticCardData: Record<number, {
 
 export function InfoCardsSection({ language }: InfoCardsSectionProps) {
   const { cards, loading } = useCardTranslations(language)
+  const { translations } = useTranslations(language)
 
   if (loading) {
     return (
@@ -83,10 +85,10 @@ export function InfoCardsSection({ language }: InfoCardsSectionProps) {
       <div className="w-full max-w-7xl mx-auto px-3 sm:px-6 md:px-8 lg:px-4">
         <div className="text-center mb-8 sm:mb-12">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-display font-bold text-foreground mb-3 sm:mb-4 break-words px-2">
-            Informações Importantes
+            {translations.importantInfoTitle || "Informações Importantes"}
           </h2>
           <p className="text-muted-foreground text-sm sm:text-base md:text-lg max-w-2xl mx-auto px-4 break-words">
-            Clique em cada card para saber mais sobre migração, refúgio e direitos humanos
+            {translations.importantInfoDescription || "Clique em cada card para saber mais sobre migração, refúgio e direitos humanos"}
           </p>
         </div>
 
